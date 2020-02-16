@@ -1,0 +1,325 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('assets/background.jpg');
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+}
+
+#logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: fill 0.5s ease forwards 3s;
+}
+
+/* Select all the specific letters */
+#logo path:nth-child(1) { /* C */
+    stroke-dasharray: 508px;
+    stroke-dashoffset: 508px;
+    animation: line-anim 2s ease forwards;
+}
+
+#logo path:nth-child(2) { /* I */
+    stroke-dasharray: 226px;
+    stroke-dashoffset: 226px;
+    animation: line-anim 2s ease forwards 0.2s;
+
+}
+
+#logo path:nth-child(3) { /* T */
+    stroke-dasharray: 336px;
+    stroke-dashoffset: 336px;
+    animation: line-anim 2s ease forwards 0.5s;
+}
+
+#logo path:nth-child(4) { /* y */
+    stroke-dasharray: 372px;
+    stroke-dashoffset: 372px;
+    animation: line-anim 2s ease forwards 0.7s;
+}
+
+#logo path:nth-child(5) { /* S */
+    stroke-dasharray: 493px;
+    stroke-dashoffset: 493px;
+    animation: line-anim 2s ease forwards 0.9s;
+}
+
+#logo path:nth-child(6) { /* T */
+    stroke-dasharray: 336px;
+    stroke-dashoffset: 336px;
+    animation: line-anim 2s ease forwards 0.12s;
+}
+
+#logo path:nth-child(7) { /* A */
+    stroke-dasharray: 490px;
+    stroke-dashoffset: 490px;
+    animation: line-anim 2s ease forwards 0.14s;
+}
+
+#logo path:nth-child(8) { /* G */
+    stroke-dasharray: 635px;
+    stroke-dashoffset: 635px;
+    animation: line-anim 2s ease forwards 0.16s;
+}
+
+#logo path:nth-child(9) { /* E */
+    stroke-dasharray: 463px;
+    stroke-dashoffset: 463px;
+    animation: line-anim 2s ease forwards 0.18s;
+}
+
+@keyframes line-anim {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fill {
+    from {
+        fill: transparent;
+    }
+
+    to {
+        fill: white;
+    }
+}
+
+/*
+form input {
+    text-align:center;
+    margin: auto;
+}*/
+
+.form_inner {
+    background:rgba(30, 30, 30, 0.9);
+    box-shadow: 0px 0px 4px rgb(10, 10, 10);
+    min-width: 350px;
+    padding: 25px 75px 25px 75px;
+   
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    /*visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 2s, opacity 2s linear;*/
+}
+
+.visible {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 2s linear;
+}
+
+/****************************
+ * Terms of service
+****************************/
+.terms_of_service {
+    color: rgb(220, 220, 220);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    
+ 
+    text-align: center;
+}
+
+.terms_of_service a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+#terms_of_service_text {
+    position: absolute;
+    left: 50%;
+    padding-top: 25px;
+    transform: translate(-42%, -50%);
+}
+
+.terms_of_service input {
+    color: white !important;
+    background: none !important;
+    font-size: 15px !important;
+
+    transform: translate(-100px, -00%);
+}
+
+/* Terms of Service Checkbox */
+.regular-checkbox {
+	-webkit-appearance: none;
+	background-color: #fafafa;
+	border: 1px solid #cacece;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+	padding: 9px;
+	border-radius: 3px;
+	display: inline-block;
+    position: relative;
+    font-weight: bold;
+   
+}
+
+.regular-checkbox:active, .regular-checkbox:checked:active {
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+
+}
+
+.regular-checkbox:checked {
+	background-color: #e9ecee;
+	border: 1px solid #adb8c0;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+    color: #99a1a7;
+    color: white;
+}
+
+.regular-checkbox:checked:after {
+	content: '\2714';
+	font-size: 14px;
+	position: absolute;
+	top: 0px;
+	left: 3px;
+    color: #99a1a7;
+    color: white;
+}
+
+/****************************
+ * Password Awesomeness
+****************************/
+/* A row below the password field that expands and hides */
+#pwd_expand_row {
+    min-width: 300px;
+    padding-left: 0px;
+}
+#pwd_expand_row ul {
+    list-style: none;
+    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: rgb(230, 230, 230);
+    padding-left: 5px;
+}
+
+#pwd_expand_row li:before {
+    content: '✓';
+    padding-right: 10px;
+}
+
+#reg_pwd_icon {
+    position: absolute;
+    left: 340px;
+}
+
+#reg_progress_text {
+    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+}
+
+/* Colourful bar below the password */
+#pwd_prog_bar {
+    height: 3px;
+}
+
+/* Registration title with an icon at the left */
+#subscribeTitle {
+    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 50px;
+    color: white;
+    min-width: 200px;
+}
+
+/* Each label inside the form */
+.form_inner label {
+    font-size: 16px;
+    color: rgb(205, 205, 205);
+ 
+    font-family: 'Roboto', sans-serif;
+    font-family: Verdana;
+    color: rgb(220, 220, 220);
+
+    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Each input outter element selector */
+.fieldBox {
+    min-width: 300px;
+    display: flex;
+    width: 250px;
+    margin-bottom: 15px;
+    margin: auto;
+    margin-top: 3px;
+    margin-bottom: 15px;
+}
+
+/* Each input field */
+.fieldBox input {
+    width: 100%;
+    min-height: 28px;
+    
+    font-size: 14px;
+    text-align: left;
+    color: rgb(220, 220, 220);
+  
+    border: 0;
+    outline: none;
+    padding-left: 40px !important;
+    padding-right: 15px;
+    background: none;
+    border-bottom: 1px solid rgb(250, 250, 250);
+
+    transition: all 2s ease-in ;
+}
+
+.fieldBox input:hover {
+    transition: all 2s ease-in ;
+}
+
+/* Lest font awesome icon inside each input field */
+.fieldBox i {
+    color: white;
+    text-align: center;
+
+    padding: 7px 5px 10px 15px;
+    position: absolute;
+}
+
+/**************************************************************
+ * Submit Button
+**************************************************************/
+.submitButton {
+    text-align: center;
+}
+
+.submitButton input {
+    color: white !important;
+    font-size: 14px;
+  
+    padding: 6px 15px 6px 15px;
+    margin: 5px;
+    background: none;
+    border-radius: 3px;
+    border: solid 1px rgba(250, 250, 250, 0.5);
+  
+    transition: all 0.5s ease;
+}
+
+.submitButton input:hover {
+    background: rgba(255, 255, 255, 0.2);
+
+    transition: all 0.5s ease;
+}
+
+
+/* Citystage */
